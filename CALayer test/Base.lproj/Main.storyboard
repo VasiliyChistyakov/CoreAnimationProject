@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CALayer_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prog" translatesAutoresizingMaskIntoConstraints="NO" id="P1S-4F-jc9">
+                                <rect key="frame" x="87" y="124" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="EKH-bT-1c0"/>
+                                    <constraint firstAttribute="width" constant="240" id="pvz-9e-kSh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-zz-Qtu">
+                                <rect key="frame" x="139" y="631" width="136" height="89"/>
+                                <color key="backgroundColor" red="0.30734436199999998" green="0.69822731599999999" blue="0.2699906715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cWg-zz-Qtu" secondAttribute="height" multiplier="136:89" id="Ibd-HE-QXC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Tap me!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7b-0r-CoD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="cWg-zz-Qtu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="Rir-pJ-ivz"/>
+                            <constraint firstItem="P1S-4F-jc9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="S3V-VV-mUh"/>
+                            <constraint firstItem="P1S-4F-jc9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="fT5-My-g1M"/>
+                            <constraint firstItem="cWg-zz-Qtu" firstAttribute="top" secondItem="P1S-4F-jc9" secondAttribute="bottom" constant="267" id="ldF-lp-War"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cWg-zz-Qtu" secondAttribute="trailing" constant="139" id="qhu-j3-MZN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P1S-4F-jc9" secondAttribute="trailing" constant="87" id="wsq-iX-oXg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageVC" destination="P1S-4F-jc9" id="fji-bV-vBu"/>
+                        <outlet property="tapButton" destination="cWg-zz-Qtu" id="I8x-Ql-Oz3"/>
+                        <segue destination="SuX-al-d5k" kind="show" identifier="showSecondScreen" id="lar-rx-ziP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="dza-pW-HmB">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="SuX-al-d5k" customClass="SecondViewController" customModule="CALayer_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oVG-fB-wip">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup" translatesAutoresizingMaskIntoConstraints="NO" id="OWI-H7-MT8">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="rma-2F-Jbf"/>
+                                    <constraint firstAttribute="width" constant="240" id="vAf-Gs-TBJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh3-Ba-sN0">
+                                <rect key="frame" x="107" y="665" width="200" height="89"/>
+                                <color key="backgroundColor" red="0.30734436199999998" green="0.69822731599999999" blue="0.2699906715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nh3-Ba-sN0" secondAttribute="height" multiplier="200:89" id="10i-UX-cna"/>
+                                    <constraint firstAttribute="width" secondItem="Nh3-Ba-sN0" secondAttribute="height" multiplier="200:89" id="Ftu-7B-raj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Take the cup">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeAction:" destination="SuX-al-d5k" eventType="touchUpInside" id="wa7-0L-edK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xZc-P9-FZb"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="OWI-H7-MT8" firstAttribute="centerX" secondItem="oVG-fB-wip" secondAttribute="centerX" id="4gO-f8-aAZ"/>
+                            <constraint firstItem="xZc-P9-FZb" firstAttribute="trailing" secondItem="Nh3-Ba-sN0" secondAttribute="trailing" constant="107" id="HyU-3G-3uT"/>
+                            <constraint firstItem="Nh3-Ba-sN0" firstAttribute="top" secondItem="OWI-H7-MT8" secondAttribute="bottom" constant="97" id="rfX-fn-Dxh"/>
+                            <constraint firstItem="OWI-H7-MT8" firstAttribute="centerY" secondItem="oVG-fB-wip" secondAttribute="centerY" id="tUR-RE-JS8"/>
+                            <constraint firstItem="Nh3-Ba-sN0" firstAttribute="leading" secondItem="xZc-P9-FZb" secondAttribute="leading" constant="107" id="zSS-WS-MUi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wue-cQ-IfP"/>
+                    <connections>
+                        <outlet property="iamgeSVC" destination="OWI-H7-MT8" id="5Vr-09-a1V"/>
+                        <outlet property="takeButton" destination="Nh3-Ba-sN0" id="kQd-uC-oEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUg-6k-YYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cup" width="200" height="200"/>
+        <image name="prog" width="200" height="200"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
